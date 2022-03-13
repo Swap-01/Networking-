@@ -1,0 +1,29 @@
+import java.io.*;
+import java.util.Scanner;
+
+class Susmit {
+    static String FindIp(String str) {
+        int index = str.indexOf('.');
+        String str1 = str.substring(0, index);
+        int int1 = Integer.parseInt(str1);
+        if (int1 >= 0 && int1 <= 127)
+            return "A";
+        if (int1 >= 128 && int1 <= 191)
+            return "B";
+        if (int1 >= 192 && int1 <= 223)
+            return "C";
+        if (int1 >= 224 && int1 <= 239)
+            return "D";
+        else
+            return "E";
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the Ip Address: ");
+        String ip = sc.nextLine();
+        String str3 = FindIp(ip);
+        System.out.println("Class of the user given Ip is  " + str3);
+
+    }
+}
