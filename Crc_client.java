@@ -28,6 +28,7 @@ public class Crc_client {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Enter the binary message : ");
         String msg = br.readLine();
         String crc = checksum(msg.concat("000"));
         System.out.println(crc);
