@@ -37,9 +37,9 @@ public class Crc_server {
             System.out.println(Clientsent);
             String str3 = "";
             if (checksum(Clientsent).equalsIgnoreCase("000"))
-                str3 = "There is an ERROR!!!!!!!!";
+                str3 = "There are no ERRORS!!!!!!!!";
             else
-                str3 = "There are no ERRORS";
+                str3 = "There are ERRORS";
             System.out.println(checksum(Clientsent));
             DataOutputStream ds = new DataOutputStream(s.getOutputStream());
             ds.writeBytes(str3 + "\n");
